@@ -1,13 +1,14 @@
 let animTitle = document.querySelector('#anim-title');
 let worldArr = animTitle.innerHTML.split('');
 let newTitle = document.createElement('div');
-
+let animTime = 0;
 worldArr.forEach(world => {
   let titleWorld = document.createElement('span');
-  titleWorld.style.animationDelay = `${Math.ceil(Math.random() * 1000) + 400}ms`;
-  // titleWorld.style.opacity = `1`;
+  
+  titleWorld.style.animationDelay = `${(animTime +=100) + 200}ms`;
   titleWorld.innerHTML = `${world}`;
   newTitle.appendChild(titleWorld);
+  animTime+=100
 });
 
 
