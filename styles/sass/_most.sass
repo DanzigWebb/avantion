@@ -1,0 +1,221 @@
+/////////////////////////////////////////////////////////////
+// body
+/////////////////////////////////////////////////////////////
+html
+	scroll-behavior: smooth
+	overflow-x: hidden
+
+.site-body
+	font-size: 16px
+	margin: auto
+	position: relative
+	line-height: 22px
+	font-family: "Montserrat", sans-serif
+	font-weight: 400
+	overflow-x: hidden
+	color: #333
+	width: 100%
+	transition: $anim
+	background-color: #efefef
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+/////////////////////////////////////////////////////////////
+// links and buttons
+/////////////////////////////////////////////////////////////
+
+.def-link
+	transition: $anim
+
+	&:hover
+		text-decoration: none
+
+.site-link
+	transition: $anim
+	color: $accent
+
+	&:hover
+		text-decoration: none
+		color: #954a46
+
+.btn
+	height: 45px
+	padding: 0 40px
+	margin: 10px 0
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	font-size: 17px
+	background-color: $dark
+	margin: 0
+	border: none
+	overflow: visible
+	color: #ffffff
+	box-sizing: border-box
+	font-size: 12px
+	letter-spacing: 1px
+	text-transform: uppercase
+	text-decoration: none
+	text-align: center
+	transition: all 0.4s ease-in-out
+
+	&:hover
+		color: $dark
+		background-color: $grey
+		text-decoration: none
+		box-shadow: 0 1px 7px rgba(0, 0, 0, 0.6) inset
+
+	&--dark
+		background-color: #4a4a4a
+
+		&:hover
+			background-color: #424242
+
+/////////////////////////////////////////////////////////////
+// typograf
+/////////////////////////////////////////////////////////////
+// h1, h2, h3, h4, h5, h6
+// 	font-family: "Oswald", sans-serif
+
+.title-1
+	font-size: 48px
+	font-weight: 400
+	line-height: 52px
+	margin-bottom: 20px
+	+media-breakpoint-down(xs)
+		font-size: 38px
+		line-height: 42px
+
+.title-2
+	font-size: 48px
+	line-height: 52px
+	margin: 0 0 15px 0
+	font-weight: 300
+	color: #444444
+
+.title-4
+	font-size: 18px
+	font-weight: normal
+	margin-bottom: 15px
+
+.title-5
+	border-bottom: 2px solid #ffcd38
+	display: inline-block
+	font-weight: normal
+	padding-bottom: 2px
+	margin-bottom: 20px
+	font-size: 18px
+
+p
+	font-size: 16px
+	font-weight: 300
+	color: #666
+	margin: 0 0 20px
+
+.heading
+	margin: 15px 0
+
+.headerbrd
+	height: 60px
+	width: 95%
+	background: url(../../img/block_divider_dark.png) 50% 50% repeat-x
+	padding: 30px 0
+
+	&--min
+		background: url(../../img/headerbrd--min.png) 50% 50% repeat-x
+
+	&--white
+		background: url(../../img/headerbrd--white.png) 50% 50% repeat-x
+
+	+media-breakpoint-down(xs)
+		width: 100%
+
+/////////////////////////////////////////////////////////////
+// social
+/////////////////////////////////////////////////////////////
+.social-nav
+	margin: 20px 0
+	text-align: center
+
+	.fab
+		box-sizing: border-box
+		display: inline-block
+		width: 40px
+		height: 40px
+		border-radius: 100%
+		background: $accent
+		color: #ffffff
+		font-size: 15px
+		text-align: center
+		position: relative
+		background-image: url(../../img/grunge_bg_light.png)
+		background-position: 0 0
+		background-repeat: repeat
+		transition: all 0.1s ease-in-out
+		display: inline-flex
+		justify-content: center
+		align-items: center
+
+		&:after
+			content: ""
+			position: absolute
+			width: 36px
+			height: 36px
+			border: 2px solid #fff
+			border-radius: 50%
+
+			&:hover
+				background: $dark
+				color: #fff
+
+    a:hover
+			text-decoration: none
+
+/////////////////////////////////////////////////////////////
+// up-button
+/////////////////////////////////////////////////////////////
+
+#up-button
+	position: fixed
+	bottom: 10px
+	right: 10px
+	opacity: 0
+	transition: $anim
+	z-index: 9999999
+
+	&:hover
+		opacity: 1
+
+	&.is-active
+		opacity: 0.4
+
+.up-button
+	&__btn
+		cursor: pointer
+		border-radius: 8px
+		border: none
+		background-color: $accent
+		color: #fff
+		padding: 13px
+
+/////////////////////////////////////////////////////////////
+// animation
+/////////////////////////////////////////////////////////////
+
+#anim-title
+	span
+		opacity: 0
+		transition: .7s
+		animation-name: txt-fade
+		animation-duration: 0.8s
+
+@keyframes txt-fade
+	0%
+		opacity: 0
+	100%
+		opacity: 1
