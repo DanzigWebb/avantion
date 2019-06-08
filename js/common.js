@@ -5,7 +5,7 @@ let animTime = 0;
 worldArr.forEach(world => {
   let titleWorld = document.createElement('span');
   
-  titleWorld.style.animationDelay = `${(animTime +=100) + 200}ms`;
+  titleWorld.style.animationDelay = `${(animTime +=3) + 400}ms`;
   titleWorld.innerHTML = `${world}`;
   newTitle.appendChild(titleWorld);
   animTime+=100
