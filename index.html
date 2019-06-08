@@ -27,32 +27,58 @@
 </head>
 
 <body class="site-body" id="my-body">
-	
-	<header class="header">
-		<div class="container">
-			<div class="header-row">
-				<div class="header-logo"><a href="/" class="header-logo__link def-link"><img src="img/logo.svg" alt="">Avanti</a></div>
-				<nav class="header-menu">
-					<ul class="header-menu-wrap">
-						<li><a href="#" class="header-menu__link is-active def-link">Home</a></li>
-						<li><a href="#" class="header-menu__link def-link">Work</a></li>
-						<li><a href="#" class="header-menu__link def-link">Resume</a></li>
-						<li><a href="#" class="header-menu__link def-link">Portfolio</a></li>
-						<li><a href="#" class="header-menu__link def-link">Contacts</a></li>
-					</ul>
-				</nav>
-				<div class="header-hamburger">
-					<span class="hamburger"></span>
+
+	<!-- menu -->
+	<menu class="side-menu">
+		<div class="side-menu-avatar">
+			<img src="img/my_photo.png" alt="">
+		</div>
+		<div class="side-menu-heading">
+			<h2 class="side-menu-heading__title">Lorem</h2>
+			<p class="side-menu-heading__footer">Lorem, ipsum.</p>
+		</div>
+		<nav class="side-menu-wrap">
+			<li class="side-menu-link-wrap"><a href="#/" class="side-menu__link def-link is-active">Home</a></li>
+			<li class="side-menu-link-wrap"><a href="#/" class="side-menu__link def-link">About</a></li>
+			<li class="side-menu-link-wrap"><a href="#/" class="side-menu__link def-link">Resume</a></li>
+			<li class="side-menu-link-wrap"><a href="#/" class="side-menu__link def-link">Portfolio</a></li>
+			<li class="side-menu-link-wrap"><a href="#/" class="side-menu__link def-link">Contacts</a></li>
+		</nav>
+		<!-- <div class="social-nav">
+			<a class="site-link" href="mailto:valverin95@gmail.com" target="_blank"><i class="fab fa-google"></i></a>
+			<a class="site-link" href="https://api.whatsapp.com/send?phone=79500247418" target="_blank"><i
+					class="fab fa-whatsapp"></i></a>
+			<a class="site-link" href="https://vk.com/id128989093" target="_blank"><i class="fab fa-vk"></i></a>
+		</div> -->
+	</menu>
+
+	<main id="site-content" class="main">
+		<header class="header">
+			<div class="container">
+				<div class="header-row">
+					<div class="header-logo"><a href="/" class="header-logo__link def-link"><img src="img/logo.svg"
+								alt="">Avanti</a></div>
+					<nav class="header-menu">
+						<ul class="header-menu-wrap">
+							<li><a href="#" class="header-menu__link is-active def-link">Home</a></li>
+							<li><a href="#" class="header-menu__link def-link">Work</a></li>
+							<li><a href="#" class="header-menu__link def-link">Resume</a></li>
+							<li><a href="#" class="header-menu__link def-link">Portfolio</a></li>
+							<li><a href="#" class="header-menu__link def-link">Contacts</a></li>
+						</ul>
+					</nav>
+					<div class="header-hamburger">
+						<span id="hamburger" class="hamburger"></span>
+					</div>
 				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
-	<main class="main">
+
 		<section class="screen">
 			<div class="container">
 				<div class="row align-items-center screen-content">
-					<div class="col-lg-6">
+					<div class="col-md-6">
 						<h1 id="anim-title" class="title-1">Stop overthinking. Advertise with us!</h1>
 						<p>Orci purus vestibulum nunc conubia, sed erat mauris donec, interdum condimentum mattis tellus</p>
 						<a href="#/" class="btn">Portfolio</a>
@@ -62,7 +88,7 @@
 		</section>
 	</main>
 
-
+	<script src="js/side-menu.js"></script>
 	<script src="js/common.js"></script>
 </body>
 

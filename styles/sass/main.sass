@@ -10,14 +10,14 @@
   position: absolute
   top: 40px
   z-index: 10
-  +media-breakpoint-down(xs)
-    display: none
+  
   &-row
     display: flex
     justify-content: space-between
     align-items: center
     height: 120px
-  
+    +media-breakpoint-down(xs)
+      height: 90px  
   &-logo
     img
       margin-right: 20px
@@ -31,11 +31,13 @@
 
   // header-menu
   &-menu
-    width: 40%
+    +media-breakpoint-down(xs)
+      display: none
     &-wrap
       display: flex
       justify-content: space-between
       margin: 0
+      padding: 0
       li
         list-style: none
     &__link
@@ -44,16 +46,21 @@
       font-weight: 600
       letter-spacing: -0.5px
       color: #686c70
+      margin: 0 10px
+      padding-bottom: 5px
       &.is-active
         color: $accent
+        border-bottom: 2px solid $accent
       &:hover
         color: $accent
 
 // first-screen
 .screen
-  // background-image: url(../../img/main-screen.jpg)
+  background-image: url(../../img/main-screen.jpg)
   background-size: cover
-  background-position: top center
+  background-position: top right
+  +media-breakpoint-down(lg)
+    background-position: center left
   &-content
     min-height: 650px
     height: 100vh

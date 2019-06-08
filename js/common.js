@@ -2,15 +2,18 @@ let animTitle = document.querySelector('#anim-title');
 let worldArr = animTitle.innerHTML.split('');
 let newTitle = document.createElement('div');
 let animTime = 0;
+
 worldArr.forEach(world => {
   let titleWorld = document.createElement('span');
-  
-  titleWorld.style.animationDelay = `${(animTime +=3) + 400}ms`;
+
+  titleWorld.style.animationDelay = `${Math.ceil(Math.random() * 1200) + 50}ms`;
   titleWorld.innerHTML = `${world}`;
   newTitle.appendChild(titleWorld);
-  animTime+=100
 });
-
-
 animTitle.innerHTML = newTitle.innerHTML
-// console.log(newTitle)
+
+// let humburger = document.getElementById('hamburger');
+// humburger.addEventListener('click', () => {
+//   humburger.classList.toggle('is-active')
+// })
+sidebar.init()
