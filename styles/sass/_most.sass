@@ -139,7 +139,7 @@ p
 // social
 /////////////////////////////////////////////////////////////
 .social-nav
-	margin: 20px 0
+	margin: 40px 0
 	text-align: center
 
 	.fab
@@ -147,10 +147,9 @@ p
 		display: inline-block
 		width: 40px
 		height: 40px
-		border-radius: 100%
-		background: $accent
-		color: #ffffff
-		font-size: 15px
+		background: #232331
+		color: #fff
+		font-size: 14px
 		text-align: center
 		position: relative
 		background-image: url(../../img/grunge_bg_light.png)
@@ -160,13 +159,14 @@ p
 		display: inline-flex
 		justify-content: center
 		align-items: center
-
+		border: 4px solid #232331
+		margin: 0 7px 
 		&:after
 			content: ""
 			position: absolute
 			width: 36px
 			height: 36px
-			border: 2px solid #fff
+			
 			border-radius: 50%
 
 			&:hover
@@ -184,6 +184,9 @@ p
 	display: flex
 	align-items: center
 	justify-content: center
+	z-index: 10
+	+media-breakpoint-up(sm)
+		display: none
 .hamburger
 	height: 4px
 	width: 40px
@@ -204,6 +207,7 @@ p
 		position: absolute
 		top: 10px
 		transition: all .5s ease
+		z-index: -1	
 	&:before
 		content: ''
 		height: 4px
@@ -213,6 +217,7 @@ p
 		position: absolute
 		bottom: 10px
 		transition: all .5s ease
+		z-index: -1	
 
 .hamburger.is-active
 	width: 0

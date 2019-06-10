@@ -64,4 +64,29 @@
   &-content
     min-height: 650px
     height: 100vh
+.slider-wrap
+  overflow: hidden
+  position: relative
+  button
+    position: absolute
+    bottom: 50px
+    left: 20px
+    z-index: 99
+    background-color: transparent
+    border: none
+    color: #fff
+    font-size: 40px
+  #left
+    left: 10px
+  #right
+    left: 70px
+#my-slider
+  height: 300px
+  position: relative
+  display: flex
+  transition: $anim
+.slider-item
+  height: 100%
+  width: 100%
+  transition: all .3s
 @import "media"

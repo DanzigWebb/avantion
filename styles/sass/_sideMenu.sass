@@ -21,6 +21,7 @@ $menu-bg: #1b1b24
   transition: $anim
   margin: 0
   z-index: 999
+  
   ul
     margin: 0
     padding-left: 40px
@@ -32,8 +33,17 @@ $menu-bg: #1b1b24
     max-width: 50%
     margin: 10px auto
     padding: 10px 0
+    margin-bottom: 40px
     img
       width: 100%
+      background-color: #fff
+      border-radius: 100%
+      margin-right: 15px
+    a
+      color: #dedede
+      text-align: center
+      display: flex
+      align-items: center
   // heading
   &-heading
     text-align: center
@@ -87,7 +97,7 @@ $menu-bg: #1b1b24
 #my-body.is-active
   #site-content
     transform: translateX(-$menu-width)
-    transition-delay: .1s
+    transition-delay: .2s
     filter: brightness(0.4)
     &:before
       content: ''
@@ -147,3 +157,4 @@ $menu-bg: #1b1b24
   .fas
     transform: rotate(-180deg)
     color: $accent
+
