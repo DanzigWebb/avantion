@@ -62,11 +62,18 @@
   +media-breakpoint-down(lg)
     background-position: center left
   &-content
-    min-height: 650px
+    min-height: 600px
     height: 100vh
-    +media-breakpoint-down(xs)
-      height: 650px
+    align-items: center
+    padding: 60px 0
+    +media-breakpoint-down(md)
+      height: 560px
       min-height: auto
+      align-items: flex-end
+    +media-breakpoint-down(sm)
+      height: 500px
+    +media-breakpoint-down(xs)
+      height: 600px
 
 .main-slider
   background-color: #222222
@@ -79,6 +86,9 @@
   z-index: 10
   top: 50%
   transform: translateY(-50%)
+  +media-breakpoint-down(xs)
+    top: 100%
+    right: 20px
   button
     border: none
     outline: none
@@ -86,6 +96,8 @@
     color: #fff
     font-size: 28px
     transition: $anim
+    +media-breakpoint-down(xs)
+      font-size: 44px
     &:hover
       color: $accent
 #my-slider
@@ -93,13 +105,16 @@
   position: relative
   display: flex
   transition: $anim
+  +media-breakpoint-down(xs)
+    height: 340px
   
 .slider-item
   height: 100%
   width: 100%
   transition: all .3s
   img
-    width: 100%
+    min-width: 100%
+    height: 100%
 
 .slider-content-wrap
   display: flex
@@ -107,9 +122,15 @@
   justify-content: center
   height: 100%
   color: #dedede
+  padding: 20px
+  +media-breakpoint-down(xs)
+    height: 340px
+  
   p
     color: rgba(255, 255, 255, 0.4)
     max-width: 60%
+    +media-breakpoint-down(sm)
+      max-width: 100%
   a
     color: $accent
     font-weight: 200
