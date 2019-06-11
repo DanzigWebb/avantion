@@ -67,31 +67,52 @@
     +media-breakpoint-down(xs)
       height: 650px
       min-height: auto
+
+.main-slider
+  background-color: #222222
 .slider-wrap
   overflow: hidden
   position: relative
+.slider-controls
+  position: absolute
+  right: 0
+  z-index: 10
+  top: 50%
+  transform: translateY(-50%)
   button
-    position: absolute
-    bottom: 50px
-    left: 20px
-    z-index: 99
-    background-color: transparent
     border: none
+    outline: none
+    background-color: transparent
     color: #fff
-    font-size: 40px
-    +media-breakpoint-down(xs) 
-      display: none
-  #left
-    left: 10px
-  #right
-    left: 70px
+    font-size: 28px
+    transition: $anim
+    &:hover
+      color: $accent
 #my-slider
-  height: 300px
+  height: 400px
   position: relative
   display: flex
   transition: $anim
+  
 .slider-item
   height: 100%
   width: 100%
   transition: all .3s
+  img
+    width: 100%
+
+.slider-content-wrap
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 100%
+  color: #dedede
+  p
+    color: rgba(255, 255, 255, 0.4)
+    max-width: 60%
+  a
+    color: $accent
+    font-weight: 200
+    font-size: 12px
+    letter-spacing: 0.8px
 @import "media"
