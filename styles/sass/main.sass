@@ -64,6 +64,9 @@
   &-content
     min-height: 650px
     height: 100vh
+    +media-breakpoint-down(xs)
+      height: 650px
+      min-height: auto
 .slider-wrap
   overflow: hidden
   position: relative
@@ -76,6 +79,8 @@
     border: none
     color: #fff
     font-size: 40px
+    +media-breakpoint-down(xs) 
+      display: none
   #left
     left: 10px
   #right
