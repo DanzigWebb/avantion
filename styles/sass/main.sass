@@ -74,7 +74,9 @@
       height: 500px
     +media-breakpoint-down(xs)
       height: 600px
-
+/////////////////////////////////////////////////////////////
+// slider
+/////////////////////////////////////////////////////////////
 .main-slider
   background-color: #222222
 .slider-wrap
@@ -101,10 +103,12 @@
     &:hover
       color: $accent
 #my-slider
-  height: 400px
+  height: 500px
   position: relative
   display: flex
   transition: $anim
+  +media-breakpoint-down(sm)
+    height: 400px
   +media-breakpoint-down(xs)
     height: 340px
   
@@ -117,6 +121,8 @@
     height: 100%
 .slider-content-txt
   background-color: #222
+  +media-breakpoint-down(sm)
+    height: 400px
   +media-breakpoint-down(xs)
     height: 340px
 .slider-content-wrap
@@ -143,4 +149,13 @@
   top: 20%
   +media-breakpoint-down(xs)
     top: 10%
+
+// about
+
+.about
+  text-align: center
+  padding: 80px 0
+  background-color: #f4f5f6
+  +media-breakpoint-down(xs)
+    padding: 40px 0
 @import "media"
