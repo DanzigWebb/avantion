@@ -3,6 +3,7 @@ let sidebar = {
 	headerButton: document.querySelector('#hamburger'),
 	siteContent: document.querySelector('#site-content'),
 	sideMenu: document.querySelector('.side-menu'),
+	header: document.querySelector('#header'),
   // настраиваемые параметры
 	linkBtn: '<i class="fas fa-arrow-up"></i>',
 	// инициализация
@@ -50,14 +51,16 @@ let sidebar = {
 		});
 		// методы меню
 		let openMenu = function () {
-			thisHelper.headerButton.classList.add('is-active')
+			thisHelper.headerButton.classList.add('is-active');
       thisHelper.body.classList.add('is-active');
-      document.documentElement.style.overflow = 'hidden';
+			document.documentElement.style.overflow = 'hidden';
+			thisHelper.header.style.transform = 'translateY(-200%)';
 		};
 		let closeMenu = function () {
-			thisHelper.headerButton.classList.remove('is-active')
+			thisHelper.headerButton.classList.remove('is-active');
       thisHelper.body.classList.remove('is-active');
-      document.documentElement.style.overflow = 'auto';
+			document.documentElement.style.overflow = 'auto';
+			thisHelper.header.style.transform = 'translateY(0)';
 		};
 	}
 }

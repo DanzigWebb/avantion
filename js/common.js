@@ -1,3 +1,9 @@
+
+sidebar.init()
+
+slider.init()
+
+
 let animTitle = function () {
   let animTitle = document.querySelector('#anim-title');
   let worldArr = animTitle.innerHTML.split('');
@@ -14,7 +20,22 @@ let animTitle = function () {
 }
 animTitle()
 
+let headerFixed = function () {
+  let header = document.querySelector('#header');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 600) {
+      header.classList.remove('out')
+      header.classList.add('fade')
+      header.style.opacity = '1'
+    }
+    else if (window.scrollY < 600 && window.scrollY > 400) {
+      header.style.opacity = '0'
+    }
+    else {
+      header.style.opacity = '1'
+      header.classList.remove('fade')
+    }
+  })
+}
 
-sidebar.init()
-
-slider.init()
+headerFixed()

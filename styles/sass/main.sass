@@ -8,9 +8,23 @@
   background-color: #fff
   width: 100%
   position: absolute
+  transition-property: transform, opacity
+  transition-duration: .5s
   top: 40px
   z-index: 10
-  
+  &.fade
+    top: 0
+    opacity: 1
+    position: fixed
+    transition-property: transform, opacity
+    transition-duration: .5s
+    animation: fadeHeader
+    animation-delay: .3s
+    animation-duration: 1s
+    animation-fill-mode: backwards
+    z-index: 10
+    .header-row
+      height: 70px
   &-row
     display: flex
     justify-content: space-between
@@ -85,7 +99,7 @@
 .slider-controls
   position: absolute
   right: 5px
-  z-index: 10
+  z-index: 1
   top: 50%
   transform: translateY(-50%)
   +media-breakpoint-down(xs)
