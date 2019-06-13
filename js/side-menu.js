@@ -4,6 +4,7 @@ let sidebar = {
 	siteContent: document.querySelector('#site-content'),
 	sideMenu: document.querySelector('.side-menu'),
 	header: document.querySelector('#header'),
+	// footer: document.querySelector('.main-footer'),
   // настраиваемые параметры
 	linkBtn: '<i class="fas fa-arrow-up"></i>',
 	// инициализация
@@ -26,7 +27,7 @@ let sidebar = {
 		// закрытие меню при клике на ссылку или вне меню
 		document.addEventListener('click', function (e) {
 			menuLink.forEach(link => {
-				if (e.target == link || e.target == thisHelper.siteContent) {
+				if (e.target == link || e.target == thisHelper.siteContent || e.target == document.body) {
 					closeMenu()
 				}
 			});
